@@ -38,7 +38,7 @@ $ docker push  gcr.io/mohamed-abdelrazik-project/redis_image
 
 - Installing kubctl and g cloud auth
     
-    I did it from the metadata startup command to try to automate the process of installation and configuration of the cluster 
+    using  metadata startup command to try to automate the process of installation and the configuration of the cluster 
     
 
 ![Untitled](GCP_Final_task%20afa60f4708fc43a788175e0bb1070014/Untitled%202.png)
