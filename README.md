@@ -14,17 +14,17 @@ After writing docker file
 		
 $ docker build -t pyton_app_image:v1 .
 ```
-
+# Then tag the image
 ```markup
-Then tag the image
 
 $ docker tag pyton_app_image:v1 gcr.io/mohamed-abdelrazik-project/python_app_image:v1
 ```
-
+# Then push it to GCR
 ```bash
-then push it to GCR
-
 $ docker push gcr.io/mohamed-abdelrazik-project/python_app_image:v1
+```
+# Pull redis image Then,pushing it to GCR
+```bash
 $ docker pull redis 
 $ docker tag redis   gcr.io/mohamed-abdelrazik-project/redis_image
 $ docker push  gcr.io/mohamed-abdelrazik-project/redis_image
