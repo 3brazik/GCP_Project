@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app-deployment
+  labels:
+    app: myapp
+    type: front-end
+
+spec:
+  template:
+    metadata:
+      labels:
+        app: myapp
+        type: front-end
+
+    spec:
+      containers:
+        - name: app-container
+          image: gcr.io/mohamed-abdelrazik-project/python-app-img
+          env:
+            - name: REDIS_HOST
+              value: redis-service.default.svc.cluster.local
+          containerPort:
+            - port : 8000    
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
+  
+  
